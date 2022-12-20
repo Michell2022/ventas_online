@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Carrito Compras</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <main>
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col">
+                    <h2 class="d-flex justify-content-center mb-3">Realizar Compra</h2>
+                    <form id="procesar-pago" action="#">
+                        <div class="form-group row">
+                            <label for="cliente" class="col-12 col-md-2 col-form-label h2">Cliente :</label>
+                            <div class="col-12 col-md-10">
+                                <input type="text" class="form-control mb-3" id="cliente"
+                                    placeholder="Ingresa nombre cliente" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="email" class="col-12 col-md-2 col-form-label h2">Correo :</label>
+                            <div class="col-12 col-md-10">
+                                <input type="email" class="form-control mb-5" id="correo"
+                                    placeholder="Ingresa tu correo" required>
+                            </div>
+                        </div>
+
+                        <div id="carrito" class="table-responsive">
+                            <table id="lista_carrito"
+                                class="table table-hover table-bordered border-secondary text-center">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Stock</th>
+                                        <th scope="col">Detalle</th>
+                                        <th scope="col">Sub Total</th>
+                                        <th scope="col">Eliminar</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                </tbody>
+                                <tr>
+                                    <th colspan="4" scope="col" class="text-end">SUB TOTAL :</th>
+                                    <th scope="col">
+                                        <p id="subtotal"></p>
+                                    </th>
+                                    <!-- <th scope="col"></th> -->
+                                </tr>
+                                <tr>
+                                    <th colspan="4" scope="col" class="text-end">IGV :</th>
+                                    <th scope="col">
+                                        <p id="igv"></p>
+                                    </th>
+                                    <!-- <th scope="col"></th> -->
+                                </tr>
+                                <tr>
+                                    <th colspan="4" scope="col" class="text-end">TOTAL :</th>
+                                    <th scope="col">
+                                        <p id="total"></p>
+                                    </th>
+                                    <!-- <th scope="col"></th> -->
+                                </tr>
+
+                            </table>
+                        </div>
+
+                        <div class="row justify-content-between pb-5">
+                            <div class="col-md-4 mb-2">
+                                <a href="procesador.html" class="btn btn-info btn-block px-4">Seguir comprando</a>
+                            </div>
+                            <div class="col-xs-12 col-md-4">
+                                <a href="" class="btn btn-success btn-block px-5" id="procesar-compra">Realizar
+                                    compra</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-light text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn text-white btn-floating m-1" style="background-color: #3b5998;" href="#!" role="button"><i
+                        class="fab fa-facebook-f"></i></a>
+
+                <!-- Google -->
+                <a class="btn text-white btn-floating m-1" style="background-color: #dd4b39;" href="#!" role="button"><i
+                        class="fab fa-google"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn text-white btn-floating m-1" style="background-color: #ac2bac;" href="#!" role="button"><i
+                        class="fab fa-instagram"></i></a>
+
+                <!-- Linkedin -->
+                <a class="btn text-white btn-floating m-1" style="background-color: #0082ca;" href="#!" role="button"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <!-- Github -->
+                <a class="btn text-white btn-floating m-1" style="background-color: #333333;" href="#!" role="button"><i
+                        class="fab fa-github"></i></a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-white" href="https://mdbootstrap.com/">OwitechPc.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/compra.js"></script>
+
+</body>
+
+</html>

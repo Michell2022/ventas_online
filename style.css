@@ -1,0 +1,379 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none !important;
+}
+
+p {
+    font-size: 1.6em;
+}
+
+header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+}
+
+.header_superior {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: auto;
+    padding: 20px 10px;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.logo {
+    padding-left: 20px;
+}
+
+.header_superior i {
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 100%;
+    font-size: 25px;
+}
+
+.header_superior span {
+    padding-right: 15px;
+}
+
+/*  BARRA MENU */
+.contenedor {
+    width: 100%;
+    height: 60px;
+    background: #023877;
+    padding: 0px 20px;
+}
+
+.menu {
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+}
+
+nav {
+    height: 100%;
+}
+
+nav>ul {
+    height: 100%;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav ul li {
+    height: 100%;
+    list-style: none;
+    position: relative;
+}
+
+nav>ul>li:first-child>a {
+    background-image: url(image/home.png);
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: center center;
+    padding: 20px 40px;
+}
+
+nav>ul>li:first-child:hover>a {
+    background-image: url(image/home.png);
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: center center;
+    padding: 20px 40px;
+}
+
+nav>ul>li>a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: white !important;
+    transition: all 300ms ease;
+}
+
+nav>ul>li>a:hover {
+    transform: scale(1.1);
+    background: #0074c7;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* SUB MENU DE CATEGORIAS */
+nav ul li ul {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 90px;
+    left: -5px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    transition: all 300ms;
+}
+
+nav ul li:hover ul {
+    visibility: visible;
+    opacity: 1;
+    top: 70px;
+}
+
+/* PUNTA SALIENDO DEL SUB MENU DE SERVICIOS */
+nav ul li ul:before {
+    content: '';
+    width: 0;
+    height: 0px;
+    border-left: 12PX solid transparent;
+    border-right: 12PX solid transparent;
+    border-bottom: 12PX solid #fff;
+    position: absolute;
+    top: -12px;
+    left: 20px;
+}
+
+nav ul li ul li a {
+    display: block;
+    color: #0099e9;
+    padding: 6px;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+}
+
+nav ul li ul li a:hover {
+    background: #0074c7;
+    color: #fff;
+    transform: scale(1.1);
+    padding-left: 30px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+#carouselExampleSlidesOnly img {
+    height: 80vh;
+}
+
+/* BOTON SUBIR ARRIBA */
+.contenedor_boton .arriba {
+    color: #0074c7;
+    border: 2px solid #0074c7;
+    border-radius: 10PX;
+    padding: 10px;
+    width: 45px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    position: fixed;
+    top: 540px;
+    right: 10px;
+    transition: 0.5s all ease;
+    animation: subir 1s infinite alternate;
+    cursor: pointer;
+}
+
+.contenedor_boton .arriba:hover {
+    background-color: #0074c7;
+    color: white;
+}
+
+@keyframes subir {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-15px);
+    }
+}
+
+/* CATALOGO PROCESADORES */
+#categoria_procesadores {
+    padding-top: 25px;
+}
+
+div.breadcrumbs {
+    background: #F7F9FD;
+}
+
+.espacio {
+    padding-bottom: 25px;
+}
+
+.single_product {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: all 300ms;
+}
+
+.single_product:hover {
+    border: 1px solid rgba(9, 77, 159, 0.6);
+}
+
+.producto_image {
+    display: flex;
+    justify-content: center;
+}
+
+.single_product .producto_image img {
+    border-radius: 1rem 1rem 0 0;
+    max-width: 100%;
+    border-style: none;
+}
+
+.producto_contenido {
+    padding: 20px 5px 5px;
+}
+
+.producto_contenido a {
+    font-size: 17px;
+}
+
+h4.producto_titulo a {
+    color: #000;
+    font-weight: 400;
+}
+
+.detalles span {
+    color: #094d9f;
+}
+
+h4.producto_titulo {
+    margin: 0 0 8px;
+    text-align: center;
+}
+
+h4.producto_titulo {
+    line-height: 18px;
+}
+
+/* CODIGO A CARRITO DE COMPRAS */
+ul.producto_icon {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.producto_image {
+    position: relative;
+    font-size: 0px;
+}
+
+.single_product:hover i {
+    font-size: 20px;
+    transition: all 300ms;
+    color: white;
+    border: 1px solid #0074c7;
+    background: #0074c7;
+    padding: 13px 11px 9px 10px;
+}
+
+.producto_icon a i {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    border: 1px solid #fff;
+
+    border-radius: 50px;
+    color: #023877;
+    background: #fff;
+    cursor: pointer;
+}
+
+/* CODIGO A CARRITO DE COMPRAS */
+
+div.detalles {
+    margin: 20px 0px 0px;
+    text-align: center;
+}
+
+div.producto_precio {
+    margin: 0px 0px 8px;
+    text-align: center;
+}
+
+span.precio_sale_2 {
+    padding: 8px;
+    background: #094d9f;
+    color: white;
+    border-radius: 10px;
+    margin: 16px 0px 0px;
+    display: inline-block;
+}
+
+.border_tarjeta {
+    margin: 16px;
+    border: 1px solid #cfd8dc;
+    border-radius: 10px;
+}
+
+
+@media(max-width:768px) {
+    .header_superior {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo img {
+        width: 200px;
+    }
+
+    .header_superior {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header_superior span {
+        display: none;
+    }
+
+    .header_superior i {
+        padding-right: 15px;
+        font-size: 21px;
+    }
+
+    #carouselExampleSlidesOnly img {
+        height: 40vh;
+    }
+
+    .single_product:hover i {
+        font-size: 17px;
+        transition: all 300ms;
+        color: white;
+        border: 1px solid #0074c7;
+        background: #0074c7;
+        padding: 11px 9px 7px 8px;
+    }
+}
+
+@media(max-width:992px) {
+
+    .single_product:hover i {
+        font-size: 17px;
+        transition: all 300ms;
+        color: white;
+        border: 1px solid #0074c7;
+        background: #0074c7;
+        padding: 11px 9px 7px 8px;
+    }
+}
